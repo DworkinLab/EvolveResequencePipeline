@@ -1,5 +1,30 @@
 # Just some links to software to help analyse pooled sequence data.
 
+
+## Viewing mapped reads, polymorphisms etc (for SAM, BAM, VCF etc).
+[blog post reviewing different ones](http://jermdemo.blogspot.ca/2010/08/ngs-viewers-reviewed.html)
+
+[tview] see samtools
+
+[IGV](http://software.broadinstitute.org/software/igv/)
+
+[tablet](https://ics.hutton.ac.uk/tablet/)
+
+[IGB](http://bioviz.org/igb/)
+
+[highlander](http://sites.uclouvain.be/highlander/) Also variant calling..
+
+[pybamview](http://melissagymrek.com/pybamview/)
+
+[readXplorer](https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/ReadXplorer/access)
+
+[ving](http://vm-gb.curie.fr/ving/) In R/bioconductor
+
+[alview](https://github.com/NCIP/alview)
+
+[seqmonk](http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/)
+
+
 ## Identifying polymorphisms (that work well for pools.
 [Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/)
 
@@ -37,3 +62,9 @@
 ### and some or nots
 
 [Population-genetic inference from pooled-sequencing data](https://www.ncbi.nlm.nih.gov/pubmed/24787620). The paper "Genotype-Frequency Estimation from High-Throughput Sequencing Data" uses the method discussed here I think.
+
+
+
+## Assorted other things
+
+[The Marth Lab](http://marthlab.org/software.html) seems to have lots of new tools in development for variant detection etc..
