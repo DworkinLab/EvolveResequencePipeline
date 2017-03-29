@@ -16,6 +16,7 @@
 
 [Genotype-Frequency Estimation from High-Throughput Sequencing Data](http://www.genetics.org/content/201/2/473.short). Link to software is [here](https://github.com/Takahiro-Maruki/Package-GFE). 
 
+[estimating N_E from pooled sequencing data](https://github.com/ThomasTaus/Nest). Paper is [here](Estimating the Effective Population Size from Temporal Allele Frequency Changes in Experimental Evolution)
 
 ## Some reasons to be optimistic (or not) about pooled sequencing.
 [Validation of SNP allele frequencies determined by pooled next-generation sequencing in natural populations of a non-model plant species](https://www.ncbi.nlm.nih.gov/pubmed/24244686)
