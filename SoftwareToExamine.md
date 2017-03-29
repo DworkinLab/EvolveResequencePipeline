@@ -25,6 +25,8 @@
 
 (https://www.ncbi.nlm.nih.gov/pubmed/23730833)
 
+[another paper demonstrating pretty good concordance between pool seq and individual sequencing for allele frequencies](https://www.ncbi.nlm.nih.gov/pubmed/26461136)
+
 [Next Generation Sequencing of Pooled Samples: Guideline for Variants' Filtering](https://www.ncbi.nlm.nih.gov/pubmed/27670852)
 
 [Estimation of population allele frequencies from next-generation sequencing data: pool-versus individual-based genotyping](https://www.ncbi.nlm.nih.gov/pubmed/23730833)
