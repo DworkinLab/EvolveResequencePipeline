@@ -18,6 +18,8 @@
 
 [estimating N_E from pooled sequencing data](https://github.com/ThomasTaus/Nest). Paper is [here](Estimating the Effective Population Size from Temporal Allele Frequency Changes in Experimental Evolution)
 
+[correcting biases in allele frequency estimation with some machine learning approaches](https://www.ncbi.nlm.nih.gov/pubmed/26156142)
+
 ## Some reasons to be optimistic (or not) about pooled sequencing.
 [Validation of SNP allele frequencies determined by pooled next-generation sequencing in natural populations of a non-model plant species](https://www.ncbi.nlm.nih.gov/pubmed/24244686)
 
