@@ -8,6 +8,9 @@
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
 
 
+## Using two different mapping tools and comparing VCFs
+[Suitability of Different Mapping Algorithms for Genome-wide Polymorphism Scans with Pool-Seq Data](https://www.ncbi.nlm.nih.gov/pubmed/27613752)
+
 ## allele frequencies and basic evolutionary parameters.
 [SNPGenie](https://www.ncbi.nlm.nih.gov/pubmed/26227143): estimating evolutionary parameters to detect natural selection using pooled next-generation sequencing data. Link to code on github [here](https://github.com/hugheslab/snpgenie)
 
@@ -22,4 +25,5 @@
 [Next Generation Sequencing of Pooled Samples: Guideline for Variants' Filtering](https://www.ncbi.nlm.nih.gov/pubmed/27670852)
 
 and an or not
+
 [Population-genetic inference from pooled-sequencing data](https://www.ncbi.nlm.nih.gov/pubmed/24787620). The paper "Genotype-Frequency Estimation from High-Throughput Sequencing Data" uses the method discussed here I think.
