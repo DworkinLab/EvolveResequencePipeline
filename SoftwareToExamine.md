@@ -24,6 +24,8 @@
 
 [Next Generation Sequencing of Pooled Samples: Guideline for Variants' Filtering](https://www.ncbi.nlm.nih.gov/pubmed/27670852)
 
+[Estimation of population allele frequencies from next-generation sequencing data: pool-versus individual-based genotyping](https://www.ncbi.nlm.nih.gov/pubmed/23730833)
+
 and an or not
 
 [Population-genetic inference from pooled-sequencing data](https://www.ncbi.nlm.nih.gov/pubmed/24787620). The paper "Genotype-Frequency Estimation from High-Throughput Sequencing Data" uses the method discussed here I think.
