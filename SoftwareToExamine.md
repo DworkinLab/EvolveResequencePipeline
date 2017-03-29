@@ -15,7 +15,11 @@
 
 
 ## Some reasons to be optimistic (or not) about pooled sequencing.
-[Validation of SNP allele frequencies determined by pooled next-generation sequencing in natural populations of a non-model plant species.](https://www.ncbi.nlm.nih.gov/pubmed/24244686)
+[Validation of SNP allele frequencies determined by pooled next-generation sequencing in natural populations of a non-model plant species](https://www.ncbi.nlm.nih.gov/pubmed/24244686)
+
+[](https://www.ncbi.nlm.nih.gov/pubmed/23730833)
+
+[Next Generation Sequencing of Pooled Samples: Guideline for Variants' Filtering](https://www.ncbi.nlm.nih.gov/pubmed/27670852)
 
 and an or not
 [Population-genetic inference from pooled-sequencing data](https://www.ncbi.nlm.nih.gov/pubmed/24787620). The paper "Genotype-Frequency Estimation from High-Throughput Sequencing Data" uses the method discussed here I think.
