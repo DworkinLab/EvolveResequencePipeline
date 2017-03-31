@@ -28,6 +28,8 @@
 ## Identifying polymorphisms (that work well for pools.
 [Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/)
 
+[FreeBayes](https://github.com/ekg/freebayes). Seems to have a good option for pooled data.
+
 [varscan](https://github.com/dkoboldt/varscan). Seems like it has an active community.
 
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
