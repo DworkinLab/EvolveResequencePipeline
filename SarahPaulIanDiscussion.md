@@ -4,5 +4,5 @@
 [Kofler et al. 2016](http://www.g3journal.org/content/6/11/3507#sec-1). Suitability of different mapping algorithms
 - no single one removed all artefacts.
 - novalign and bwa mem did pretty well for Fst.
-- Best to use two and use intersection of SNPs in VCF.
+- Best to use two and use intersection of SNPs in VCF. The suggest bowtie2(g) and novalign(l) seemed to be the best combination.
 
