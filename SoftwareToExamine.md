@@ -25,17 +25,18 @@
 [seqmonk](http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/)
 
 
-## Identifying polymorphisms (that work well for pools.
+## Identifying polymorphisms (that work well for pools).
 [Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/)
 
 [FreeBayes](https://github.com/ekg/freebayes). Seems to have a good option for pooled data.
 
 [varscan](http://dkoboldt.github.io/varscan/). Seems like it has an active community.
 
-[CRISP](https://github.com/vibansal/crisp/).Comprehensive Read Analysis for Identification of SNVs (and short indels) from Pooled sequencing data. While the original method is from 2010, it seems (based on github repo) to still be in active use.
+[CRISP](https://github.com/vibansal/crisp/).Comprehensive Read Analysis for Identification of SNVs (and short indels) from Pooled sequencing data. While the original method is from 2010, it seems (based on github repo) to still be in active use? Not clear. It sounds like compiling it with the new version of SAMtools may not work.
 
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
 
+[SNPeff](http://snpeff.sourceforge.net/). Genetic variant annotation and effect prediction toolbox. 
 
 ## Using two different mapping tools and comparing VCFs
 [Suitability of Different Mapping Algorithms for Genome-wide Polymorphism Scans with Pool-Seq Data](https://www.ncbi.nlm.nih.gov/pubmed/27613752)
