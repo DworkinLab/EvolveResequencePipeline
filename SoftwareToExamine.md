@@ -30,7 +30,7 @@
 
 [FreeBayes](https://github.com/ekg/freebayes). Seems to have a good option for pooled data.
 
-[varscan](https://github.com/dkoboldt/varscan). Seems like it has an active community.
+[varscan](http://dkoboldt.github.io/varscan/). Seems like it has an active community.
 
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
 
