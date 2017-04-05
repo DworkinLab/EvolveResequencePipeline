@@ -30,7 +30,7 @@
 
 [FreeBayes](https://github.com/ekg/freebayes). Seems to have a good option for pooled data.
 
-[varscan](http://dkoboldt.github.io/varscan/). Seems like it has an active community.
+[VarScan](http://dkoboldt.github.io/varscan/). Seems like it has an active community.
 
 [CRISP](https://github.com/vibansal/crisp/).Comprehensive Read Analysis for Identification of SNVs (and short indels) from Pooled sequencing data. While the original method is from 2010, it seems (based on github repo) to still be in active use? Not clear. It sounds like compiling it with the new version of SAMtools may not work.
 
