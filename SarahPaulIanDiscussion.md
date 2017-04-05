@@ -33,8 +33,18 @@ They resequenced samples of *D. melanogaster* from populations sampled between 2
 8. SNPs were annotated using SNPeff version 2.0.
 9. F_ST estimates were done as shown in the paper, but corrected for both the number of sampled chromosomes and number of reads at any site.
 
+The second paper from the Petrov lab was:
+[Machado et al.](http://onlinelibrary.wiley.com/doi/10.1111/mec.13446/abstract). Comparative population genomics of latitudinal variation in Drosophila simulans and Drosophila melanogaster. Mol. Ecol.
 
+Motivation: Examine the influence of latitudinal variation and its impact with respect to selection and demography (using population genomics).
 
+Some of the work was individual flies. For the pools, these used two samples. These were a few of the samples from the above study.
+They also used a correction for effective number of chromosomes (N_C) in the sample (see the paper).
+1. mapped raw reads (no trimming I guess) to D.mel genome v5.5 using bwa aln (v 0.7.9) and sampe with default parameters.
+2. Reads mapping to autosomes were down-sampled to match the N_C of the X chromosomes.
+3. Applied a Pool-seq error model.
+
+I emailed the lead author (Heather Machado) and she confirmed that the SNP calls in this were those from the study above. She also mentioned that she is now using VarScan for SNP calling for pooled data.
 ### Schlotterer lab (PK)
 
 ### Pool lab (SM)
