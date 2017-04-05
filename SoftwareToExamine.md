@@ -32,6 +32,8 @@
 
 [varscan](http://dkoboldt.github.io/varscan/). Seems like it has an active community.
 
+[CRISP](https://github.com/vibansal/crisp/).Comprehensive Read Analysis for Identification of SNVs (and short indels) from Pooled sequencing data. While the original method is from 2010, it seems (based on github repo) to still be in active use.
+
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
 
 
