@@ -1,5 +1,8 @@
-# Just some links to software to help analyse pooled sequence data.
+# Just some links to software, tools etc. to help analyse pooled sequence data.
 
+
+## Drosophila Genome Nexus
+[Drosophila Genome Nexus](https://academic.oup.com/mbe/article/33/12/3308/2450097/A-Thousand-Fly-Genomes-An-Expanded-Drosophila). Links to over 1000 Drosophila melanogaster genomes, and importantly the variants detected among these! [here](http://www.johnpool.net/genomes.html) is the link to the file.
 
 ## Viewing mapped reads, polymorphisms etc (for SAM, BAM, VCF etc).
 [blog post reviewing different ones](http://jermdemo.blogspot.ca/2010/08/ngs-viewers-reviewed.html)
