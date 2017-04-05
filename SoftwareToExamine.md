@@ -47,6 +47,9 @@
 
 [correcting biases in allele frequency estimation with some machine learning approaches](https://www.ncbi.nlm.nih.gov/pubmed/26156142)
 
+[LDx](http://petrov.stanford.edu/pdfs/86.pdf) Estimation of Linkage Disequilibrium from HighThroughput
+Pooled Resequencing Data
+
 ## Some reasons to be optimistic (or not) about pooled sequencing.
 [Validation of SNP allele frequencies determined by pooled next-generation sequencing in natural populations of a non-model plant species](https://www.ncbi.nlm.nih.gov/pubmed/24244686)
 
