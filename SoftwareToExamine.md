@@ -36,7 +36,7 @@
 
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
 
-[SNPeff](http://snpeff.sourceforge.net/). Genetic variant annotation and effect prediction toolbox. 
+[SNPeff](http://snpeff.sourceforge.net/). Genetic variant annotation and effect prediction toolbox. Not for identifying SNPs, but for annotating them.
 
 ## Using two different mapping tools and comparing VCFs
 [Suitability of Different Mapping Algorithms for Genome-wide Polymorphism Scans with Pool-Seq Data](https://www.ncbi.nlm.nih.gov/pubmed/27613752)
