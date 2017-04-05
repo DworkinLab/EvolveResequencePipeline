@@ -28,7 +28,7 @@
 ## Identifying polymorphisms (that work well for pools).
 [Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/). A couple of important points from this paper. First GATK works well, but takes a long time even with small pools, and fails with large pools like we have used. While VarScan has low FP rates, its sensitivity and detecting true SNPs was VERY LOW. CRISP and LoFreq do pretty well, but CRISP seems to edge out LoFreq for pools with larger number of samples. Everything is based on default parameters though.
 
-[Best Practices for data preparation for calling SNPs](https://software.broadinstitute.org/gatk/best-practices/). Some parts are relevant (i.e. map to reference, mark duplicates, recalibrate etc.). See [this](https://software.broadinstitute.org/gatk/img/BP_workflow_3.6.png)
+[Best Practices for data preparation for calling SNPs](https://software.broadinstitute.org/gatk/best-practices/). Some parts are relevant (i.e. map to reference, mark duplicates, realign around small indels etc.). See [this](https://software.broadinstitute.org/gatk/img/BP_workflow_3.6.png)
 
 [FreeBayes](https://github.com/ekg/freebayes). Seems to have a good option for pooled data.
 
