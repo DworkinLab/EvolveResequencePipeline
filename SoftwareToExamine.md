@@ -53,6 +53,9 @@
 [Suitability of Different Mapping Algorithms for Genome-wide Polymorphism Scans with Pool-Seq Data](https://www.ncbi.nlm.nih.gov/pubmed/27613752)
 
 ## allele frequencies and basic evolutionary parameters.
+
+[CLEAR](https://github.com/bafnalab/clear). This a new method (and associated software) for longitudinal sequence data from E&R type experiments, that is designed for the kinds of experiments we employ. The paper is on birxiv [here](https://github.com/bafnalab/clear).
+
 [SNPGenie](https://www.ncbi.nlm.nih.gov/pubmed/26227143): estimating evolutionary parameters to detect natural selection using pooled next-generation sequencing data. Link to code on github [here](https://github.com/hugheslab/snpgenie)
 
 [Genotype-Frequency Estimation from High-Throughput Sequencing Data](http://www.genetics.org/content/201/2/473.short). Link to software is [here](https://github.com/Takahiro-Maruki/Package-GFE). 
