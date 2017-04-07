@@ -6,7 +6,7 @@
 
 
 ## Generally useful tools for sequence QC
-[NGSCheckMate: software for validating sample identity in next-generation sequencing studies within and across data types](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkx193)
+[NGSCheckMate: software for validating sample identity in next-generation sequencing studies within and across data types](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkx193). github repo is [here](https://github.com/parklab/NGSCheckMate)
 
 ## Viewing mapped reads, polymorphisms etc (for SAM, BAM, VCF etc).
 [blog post reviewing different alignment viewers ones](http://jermdemo.blogspot.ca/2010/08/ngs-viewers-reviewed.html)
