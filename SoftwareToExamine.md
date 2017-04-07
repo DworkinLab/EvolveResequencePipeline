@@ -78,7 +78,7 @@ Pooled Resequencing Data
 
 [Population-genetic inference from pooled-sequencing data](https://www.ncbi.nlm.nih.gov/pubmed/24787620). The paper "Genotype-Frequency Estimation from High-Throughput Sequencing Data" uses the method discussed here I think.
 
-
+[The Power to Detect Quantitative Trait Loci Using Resequenced, Experimentally Evolved Populations of Diploid, Sexual Organisms ](https://academic.oup.com/mbe/article/31/4/1040/1108505/The-Power-to-Detect-Quantitative-Trait-Loci-Using). Power analyses for E&R experiments with pooled data.
 
 ## Assorted other things
 
