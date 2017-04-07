@@ -48,4 +48,18 @@ I emailed the lead author (Heather Machado) and she confirmed that the SNP calls
 ### Schlotterer lab (PK)
 
 ### Pool lab (SM)
+[Bastide et al.](http://genetics.org/content/early/2016/09/15/genetics.116.192492). 2016. A Variable Genetic Architecture of Melanic Evolution in Drosophila melanogaster.
+
+Point of study was to find the genetic basis of melanism.
+
+Three dark pigemented populations were crossed with light color Zambian populations. Eight reciprocal crosses were set up for each of the combinations of crossed populations and the progeny were interbred until F20. F20 flies were scored for pigmentation and the most extreme 30 females were pooled together for sequencing for either dark or light color.
+
+  - Library prep -> 100bp read lengths with 300bp inserts 
+  - Mapped to D.mel reference (v 5.57) using BWA (v 0.6.2-r126) 
+  - BAM files remapped using Stampy (v1.0.21)
+  - Reads filtered for mapping quality of 20 and proper pairs with samtools (v0.1.18)
+  - Picard (v1.109) use to remove PCR duplicates
+  - Alignment around indels improved with GATK (v3.2)
+  - Generated mpileups with PoPoolation2 (v1.201)
+  - Calculated ancestry differentiation with their own [perl scripts](https://github.com/JohnEPool/SIBSAM1)
 
