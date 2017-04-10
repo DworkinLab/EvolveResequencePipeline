@@ -37,7 +37,7 @@ They resequenced samples of *D. melanogaster* from populations sampled between 2
 samtools rmdup ...
 ```
 
-3. local re-alignment around indels using GATK (v1.4-25). The new versions may not support this anymore (check manual).
+3. local re-alignment around indels using GATK (v1.4-25). The new versions may not support this anymore (check manual). I think the target intervals were done once, and then used to perform re-alignment for each bam file.
 
 ```{bash}
 java -Xmx8g -jar ~/GenomeAnalysisTK-1.4-25-g23e7f1b/GenomeAnalysisTK.jar -I \ 
@@ -49,7 +49,6 @@ java -Xmx8g -jar ~/GenomeAnalysisTK-1.4-25-g23e7f1b/GenomeAnalysisTK.jar -I \
   samples.sorted.dedup.bam -R dmel_ref.fasta -T IndelRealigner -targetIntervals \ 
   ./new_alignments/indelTargets/samples.intervals -o /dirs/m/samples.realign.bam & \
   wait
-
 ```
 4. Mapped SNPs and short indels using CRISP, excluding reads with base or mapping qualities below 10. The justification for using 10 (as opposed to 20 which is more common) is because they only used common SNPs that had previously been identified in DGRP.
 5. SNPs mapping to repetitive regions such as microsatellites and transposable elements, identified in the standard RepeatMasker library for *D. melanogaster* (obtained from http://genome.ucsc.edu) were excluded from analysis as were SNPs within 5 bp of polymorphic indels.
