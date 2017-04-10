@@ -27,12 +27,30 @@ They resequenced samples of *D. melanogaster* from populations sampled between 2
   ```{bash}
   bwa aln -t10 -f r1.sai sample1.fastq
   bwa aln -t10 -f r2.sai sample2.fasta
-  bwa sampe dmel_ref.fasta r1.fastq.trimmed.sai r2.fastq.trimmed.sai r1.fastq.trimmed r2.fastq.trimmed | samtools view -Sb - > /yourdir/samples.bam
+  bwa sampe dmel_ref.fasta r1.fastq.trimmed.sai r2.fastq.trimmed.sai r1.fastq.trimmed r2.fastq.trimmed \
+    | samtools view -Sb - > /yourdir/samples.bam
   ```
  Files wre then indexed as normal `samtools index ...` and sorted as normal `samtools sort ...`.
  
-2. PCR duplicates were removed using samtools (v0.1.18)
-3. local re-alignment around indels using GATK (v1.4-25)
+2. PCR duplicates were removed using samtools (v0.1.18) with the bam files.
+```{bash}
+samtools rmdup ...
+```
+
+3. local re-alignment around indels using GATK (v1.4-25). The new versions may not support this anymore (check manual).
+
+```{bash}
+java -Xmx8g -jar ~/GenomeAnalysisTK-1.4-25-g23e7f1b/GenomeAnalysisTK.jar -I \ 
+  samples.sorted.dedup.bam -R dmel_ref.fasta -T RealignerTargetCreator -o \
+  ./new_alignments/indelTargets/samples.intervals &
+wait
+
+java -Xmx8g -jar ~/GenomeAnalysisTK-1.4-25-g23e7f1b/GenomeAnalysisTK.jar -I \ 
+  samples.sorted.dedup.bam -R dmel_ref.fasta -T IndelRealigner -targetIntervals \ 
+  ./new_alignments/indelTargets/samples.intervals -o /dirs/m/samples.realign.bam & \
+  wait
+
+```
 4. Mapped SNPs and short indels using CRISP, excluding reads with base or mapping qualities below 10. The justification for using 10 (as opposed to 20 which is more common) is because they only used common SNPs that had previously been identified in DGRP.
 5. SNPs mapping to repetitive regions such as microsatellites and transposable elements, identified in the standard RepeatMasker library for *D. melanogaster* (obtained from http://genome.ucsc.edu) were excluded from analysis as were SNPs within 5 bp of polymorphic indels.
 6. SNPs with average minor allele frequency across all populations less than 15%, with minimum per-population coverage less than 10× or maximum per-population coverage greater than 400× were removed from analysis.
