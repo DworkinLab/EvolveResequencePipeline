@@ -23,9 +23,11 @@ maintain SGV in populations.
 They resequenced samples of *D. melanogaster* from populations sampled between 2003-2010. Each population sampled was between 50-200 individuals. Isofemales lines were made and progeny from this (around gen 5) were pooled to generate template DNA. 
 
 1. Mapping to D.mel reference (v 5.39) using bwa (v 0.5.9-r16)
-  - allowing for a maximum insert size of 800bp and no more than 10 mismatches/100bp. See below as they only used SNPs previously identified in the DGRP (so they were ok with higher overall error rates).
+  - allowing for a maximum insert size of 800bp and no more than 10 mismatches/100bp. See below as they only used SNPs previously identified in the DGRP (so they were ok with higher overall error rates). i.e.
   ```{bash}
-  	bwa aln -t10 -f r1.sai seq.fastq
+  	bwa aln -t10 -f r1.sai sample1.fastq
+    bwa aln -t10 -f r2.sai sample2.fastq
+    bwa sampe dmel_ref.fasta r1.fastq.trimmed.sai r2.fastq.trimmed.sai r1.fastq.trimmed r2.fastq.trimmed | samtools view -Sb - > /bamDir/mel.bam
   ```
 2. PCR duplicates were removed using samtools (v0.1.18)
 3. local re-alignment around indels using GATK (v1.4-25)
