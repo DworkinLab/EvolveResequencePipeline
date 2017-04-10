@@ -30,6 +30,7 @@ They resequenced samples of *D. melanogaster* from populations sampled between 2
     bwa sampe dmel_ref.fasta r1.fastq.trimmed.sai r2.fastq.trimmed.sai r1.fastq.trimmed r2.fastq.trimmed | samtools view -Sb - > /yourdir/samples.bam
   ```
  Files wre then indexed as normal `samtools index ...` and sorted as normal `samtools sort ...`.
+ 
 2. PCR duplicates were removed using samtools (v0.1.18)
 3. local re-alignment around indels using GATK (v1.4-25)
 4. Mapped SNPs and short indels using CRISP, excluding reads with base or mapping qualities below 10. The justification for using 10 (as opposed to 20 which is more common) is because they only used common SNPs that had previously been identified in DGRP.
