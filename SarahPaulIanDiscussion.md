@@ -90,7 +90,7 @@ Populations:
 
 Pipeline:
 
-A. Trimming: each refers to Popoolation for trimming, using a modified Mott algorithim from Phred (custome Perl script; trim.fastq.pl)
+A. Trimming: each refers to Popoolation for trimming, using a modified Mott algorithim from Phred (custom Perl script; trim.fastq.pl)
 
 B. Mapping: BWA (1. version 0.5.8c, 2. version 0.5.7) to *Drosophila* referance 5.18 and *Wolbachia*
 
