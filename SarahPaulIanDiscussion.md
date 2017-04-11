@@ -80,36 +80,45 @@ I emailed the lead author (Heather Machado) and she confirmed that the SNP calls
 2. [Orozco-terWengel et al.](https://www.ncbi.nlm.nih.gov/pubmed/22726122). 2012. Adaptation of *Drosophila* to a novel labratory environment reveals temporally heterogeneous trajectories of selected alleles
 
 Motivation: 
+
 1. Identify which loci identified as selected sites (candidate loci) are real, and not false positives
 2. Looking at time series data for insight on genomic trajectories due to selection
 
 Populations:
+
 113 isofemale lines (orignally from Portugal, acclimated to lab for 5 generations) mixed to create base (F0) population (5 females per line == 565 founder population). Base populaton split into 10 populations, with 5 subjected to each fluctuating temperature environments: 5with hot environment (18-28 degrees) and 5 with cold environment (10-20 degrees). Pooled seqeuncing of 500 individuals for 3 repicates of the base population (B) and evolved populations at generation 15 (M) and generation 27 (E; used in 2. only) (Coverge range from 30-90 fold).
 
 Pipeline:
-A. Trimming: each refers to Popoolation for trimming, using a modified Mott algorithim from Phred (custome Perl script; trim.fastq.pl)
 
-B. Mapping: BWA (1. version 0.5.8c, 2. version 0.5.7) to *Drosophila* referance 5.18 and *Wolbachia*
+> A. Trimming: each refers to Popoolation for trimming, using a modified Mott algorithim from Phred (custome Perl script; trim.fastq.pl)
+
+> B. Mapping: BWA (1. version 0.5.8c, 2. version 0.5.7) to *Drosophila* referance 5.18 and *Wolbachia*
+
   --> 2. Gave mapping parameters: -n 0.01 (error rate), -o 2 (gap opening), -d 12 & -e 12 (gap length), -l 150 (disable seed option)
 
-C. Convert to SAM and remove unpaired map reads
+> C. Convert to SAM and remove unpaired map reads
+
   --> only 2. specified use of BWA sampe when a paired read could not mapped
 
-D. Sam files filtered for quality > 20 with samtools
+> D. Sam files filtered for quality > 20 with samtools
 
-E. Convert to pileup format (samtools)
+> E. Convert to pileup format (samtools)
 
-F. Repeatmasker (3.2.9) -- possibly same method, but explained different
+> F. Repeatmasker (3.2.9) -- possibly same method, but explained different
+
   1. Use Repeatmasker to identify/mask indels and repeat sequences
+  
   2. Repeatmasker to create a gff file to mask simple sequence repeats and transposable elements. Indels and the 5 flanking nucleotides (both sides)also masked if present in 1 populations and supported by 2 reads.
 
-G. Converted to .sync file from which SNP's and allele frequencies derived
+> G. Converted to .sync file from which SNP's and allele frequencies derived
 
-H. SNP filtering:
+> H. SNP filtering:
+
   1. Average across 3 replicates (weighted by coverage)
     - remove SNPs with coverage in top 2% of a given replicate and time point
     - min-count of 30 across all lab populations (extended data not in this study) which equated to ~ average of 2% minor allele frequency across all replicates and time points (could have lower frequencies for only middle time point in this study)
     - Approx. 1.45 million SNPs
+    
   2. Following Criteria for SNPs
     - SNP occurance in atlease 2 replicate populations
     - minor allele covered by min 10 across all six populations analyzed (6??)
@@ -117,24 +126,29 @@ H. SNP filtering:
     - exluded a section of *3R* (1MB); a low freqeuncy haplotype absent in the base population but in evolved populations == likely caused by a single benefical mutation
     - exluded gene cluster on *3L* due to higher coverage causing high false positive candidates
     
-I. Identification of candidate SNPs using the CMH test
+> I. Identification of candidate SNPs using the CMH test
+
   1. Comparision of Hot-Base and Cold-Base with false discovery rate (FDR) of 0.01
     - wright-fisher simulations of neutral evolution as estimate of drift
+    
   2. Comparision of Allele Frequency Change (AFC; SNP-wise basis) between time points (B-M, M-E, & B-E) (replicates??)
     - wright-fisher simulations of neutral evolution as estimate of drift
    
-J. Linkage effects: only within 1. Tobler *et al.*
+> J. Linkage effects: only within 1. Tobler *et al.*
+
   - neutral forward simulations of populations with 250 unique haplotypes for 15 generations to model recombination using MimicrEE 
   - model correlated allele frequency dynamics caused by site linkage
   - Results: did not remove any candidates
   - look to Haploreconstruct (new method for dealing with haplotypes)
 
-K. SNPeff: Only with 2. Orozco-terWengel *et al.*
+> K. SNPeff: Only with 2. Orozco-terWengel *et al.*
+
   - *SNPEFF* 2.0.1 used to map all SNP's to genomic features 
   - occurance within 200 bases of UTR (5' and 3') == possible regulatory motifs
   - meaure overrepresentation of selected SNPs in a given feature using chi-square tests
 
-L. Gowinda Software
+> L. Gowinda Software
+
   - Permuation test, sampling all candidate SNPs mapped to a random position throughout genome (until # of random genes == number of candidate genes)
   - p-value is proportion of simulations with more genes (hypothesized to be selected for; in this case, thermal tolerance genes)
   
