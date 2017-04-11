@@ -90,30 +90,27 @@ Populations:
 
 Pipeline:
 
-> A. Trimming: each refers to Popoolation for trimming, using a modified Mott algorithim from Phred (custome Perl script; trim.fastq.pl)
+A. Trimming: each refers to Popoolation for trimming, using a modified Mott algorithim from Phred (custome Perl script; trim.fastq.pl)
 
-> B. Mapping: BWA (1. version 0.5.8c, 2. version 0.5.7) to *Drosophila* referance 5.18 and *Wolbachia*
+B. Mapping: BWA (1. version 0.5.8c, 2. version 0.5.7) to *Drosophila* referance 5.18 and *Wolbachia*
 
-  --> 2. Gave mapping parameters: -n 0.01 (error rate), -o 2 (gap opening), -d 12 & -e 12 (gap length), -l 150 (disable seed option)
+  2. Gave mapping parameters: -n 0.01 (error rate), -o 2 (gap opening), -d 12 & -e 12 (gap length), -l 150 (disable seed option)
 
-> C. Convert to SAM and remove unpaired map reads
+C. Convert to SAM and remove unpaired map reads
 
-  --> only 2. specified use of BWA sampe when a paired read could not mapped
+2. specified use of BWA sampe when a paired read could not mapped
 
-> D. Sam files filtered for quality > 20 with samtools
+D. Sam files filtered for quality > 20 with samtools
 
-> E. Convert to pileup format (samtools)
+E. Convert to pileup format (samtools)
 
-> F. Repeatmasker (3.2.9) -- possibly same method, but explained different
-
+F. Repeatmasker (3.2.9) -- possibly same method, but explained different
   1. Use Repeatmasker to identify/mask indels and repeat sequences
-  
   2. Repeatmasker to create a gff file to mask simple sequence repeats and transposable elements. Indels and the 5 flanking nucleotides (both sides)also masked if present in 1 populations and supported by 2 reads.
 
-> G. Converted to .sync file from which SNP's and allele frequencies derived
+G. Converted to .sync file from which SNP's and allele frequencies derived
 
-> H. SNP filtering:
-
+H. SNP filtering:
   1. Average across 3 replicates (weighted by coverage)
     - remove SNPs with coverage in top 2% of a given replicate and time point
     - min-count of 30 across all lab populations (extended data not in this study) which equated to ~ average of 2% minor allele frequency across all replicates and time points (could have lower frequencies for only middle time point in this study)
@@ -126,7 +123,7 @@ Pipeline:
     - exluded a section of *3R* (1MB); a low freqeuncy haplotype absent in the base population but in evolved populations == likely caused by a single benefical mutation
     - exluded gene cluster on *3L* due to higher coverage causing high false positive candidates
     
-> I. Identification of candidate SNPs using the CMH test
+I. Identification of candidate SNPs using the CMH test
 
   1. Comparision of Hot-Base and Cold-Base with false discovery rate (FDR) of 0.01
     - wright-fisher simulations of neutral evolution as estimate of drift
@@ -134,20 +131,20 @@ Pipeline:
   2. Comparision of Allele Frequency Change (AFC; SNP-wise basis) between time points (B-M, M-E, & B-E) (replicates??)
     - wright-fisher simulations of neutral evolution as estimate of drift
    
-> J. Linkage effects: only within 1. Tobler *et al.*
+J. Linkage effects: only within 1. Tobler *et al.*
 
   - neutral forward simulations of populations with 250 unique haplotypes for 15 generations to model recombination using MimicrEE 
   - model correlated allele frequency dynamics caused by site linkage
   - Results: did not remove any candidates
   - look to Haploreconstruct (new method for dealing with haplotypes)
 
-> K. SNPeff: Only with 2. Orozco-terWengel *et al.*
+K. SNPeff: Only with 2. Orozco-terWengel *et al.*
 
   - *SNPEFF* 2.0.1 used to map all SNP's to genomic features 
   - occurance within 200 bases of UTR (5' and 3') == possible regulatory motifs
   - meaure overrepresentation of selected SNPs in a given feature using chi-square tests
 
-> L. Gowinda Software
+L. Gowinda Software
 
   - Permuation test, sampling all candidate SNPs mapped to a random position throughout genome (until # of random genes == number of candidate genes)
   - p-value is proportion of simulations with more genes (hypothesized to be selected for; in this case, thermal tolerance genes)
