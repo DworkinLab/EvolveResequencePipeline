@@ -4,8 +4,21 @@
 ## Drosophila Genome Nexus
 [Drosophila Genome Nexus](https://academic.oup.com/mbe/article/33/12/3308/2450097/A-Thousand-Fly-Genomes-An-Expanded-Drosophila). Links to over 1000 Drosophila melanogaster genomes, and importantly the variants detected among these! [here](http://www.johnpool.net/genomes.html) is the link to the file.
 
+## General tools useful for many large sequencing experiments (i.e. for dealing with .fastq, .SAM, .BAM or .vcf)
+[seqtk](https://github.com/lh3/seqtk). Sequence tool kit. converting file formats, extracting certain reads or parts etc..
+
+[samtools]. In addition to examining SAM and BAM files (flagstat, view, stat), useful for converting and filtering etc...
+
+[bcftools]. A companion in many ways to samtools
+
+[vcftools]. Compare, edit convert vcf files etc.
+
+[bedtools]. for extracting certain regions/intervals etc..
 
 ## Generally useful tools for sequence QC
+
+Also see the markdown file on sequence QC.
+
 [NGSCheckMate: software for validating sample identity in next-generation sequencing studies within and across data types](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkx193). github repo is [here](https://github.com/parklab/NGSCheckMate)
 
 ## Viewing mapped reads, polymorphisms etc (for SAM, BAM, VCF etc).
