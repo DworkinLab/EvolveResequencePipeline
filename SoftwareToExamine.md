@@ -7,13 +7,13 @@
 ## General tools useful for many large sequencing experiments (i.e. for dealing with .fastq, .SAM, .BAM or .vcf)
 [seqtk](https://github.com/lh3/seqtk). Sequence tool kit. converting file formats, extracting certain reads or parts etc..
 
-[samtools]. In addition to examining SAM and BAM files (flagstat, view, stat), useful for converting and filtering etc...
+[samtools](http://www.htslib.org/). In addition to examining SAM and BAM files (flagstat, view, stat), useful for converting and filtering etc...
 
-[bcftools]. A companion in many ways to samtools
+[bcftools](http://www.htslib.org/). A companion in many ways to samtools
 
-[vcftools]. Compare, edit convert vcf files etc.
+[vcftools](https://vcftools.github.io/). Compare, edit convert vcf files etc.
 
-[bedtools]. for extracting certain regions/intervals etc..
+[bedtools](http://bedtools.readthedocs.io/en/latest/). for extracting certain regions/intervals etc..
 
 ## Generally useful tools for sequence QC
 
