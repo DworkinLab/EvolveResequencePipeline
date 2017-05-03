@@ -15,4 +15,8 @@
 
 [samstat](http://samstat.sourceforge.net/). Very simple, and sometimes only works on bam files. However, the reports are really quite helpful, in particular with examining what might be going on if you have low mapping quality (MAPQ).
 
+
+[MultiQC](https://github.com/ewels/MultiQC). Seems like a way of integrating and generating summary reports across many samples from raw reads to sam/bam to vcf. A bit like FASTQCR perhaps (?). 
+
 [see here](https://omictools.com/quality-control6-category) for a list of other QC tools for reads.
+
