@@ -11,7 +11,8 @@
 
 
 ## QC SAM and BAM files
-[samtools](http://www.htslib.org/). In particular samtools flagstat as a quick check
+[samtools](http://www.htslib.org/). In particular samtools flagstat as a quick check.
+
 [samstat](http://samstat.sourceforge.net/). Very simple, and sometimes only works on bam files. However, the reports are really quite helpful, in particular with examining what might be going on if you have low mapping quality (MAPQ).
 
 [see here](https://omictools.com/quality-control6-category) for a list of other QC tools for reads.
