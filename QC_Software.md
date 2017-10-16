@@ -13,6 +13,8 @@
 ## QC SAM and BAM files
 [samtools](http://www.htslib.org/). In particular samtools flagstat as a quick check.
 
+[deeptools](https://deeptools.readthedocs.io/en/latest/) A python library with all sorts of nice functions for visualizing SAM and BAM files and pile ups for QCing
+
 [samstat](http://samstat.sourceforge.net/). Very simple, and sometimes only works on bam files. However, the reports are really quite helpful, in particular with examining what might be going on if you have low mapping quality (MAPQ).
 
 
