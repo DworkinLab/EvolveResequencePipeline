@@ -93,6 +93,8 @@ Pooled Resequencing Data
 
 [several library prep strategies give similar allele frequencies](https://www.ncbi.nlm.nih.gov/pubmed/26014582)
 
+A new (2017) paper showing how number of individuals and among individual contribution to pools influences allele frequencies. [Link Here](http://onlinelibrary.wiley.com/doi/10.1111/1755-0998.12723/abstract)
+
 
 ### and some or nots
 
