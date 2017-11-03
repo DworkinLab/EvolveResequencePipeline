@@ -80,6 +80,13 @@ Also see the markdown file on sequence QC.
 [LDx](http://petrov.stanford.edu/pdfs/86.pdf) Estimation of Linkage Disequilibrium from HighThroughput
 Pooled Resequencing Data
 
+[Pool-hmm](http://onlinelibrary.wiley.com/doi/10.1111/1755-0998.12063/full). A Python program for estimating the allele frequency spectrum and detecting selective sweeps from next generation sequencing of pooled samples.
+
+[Nest](https://github.com/ThomasTaus/Nest). Simulate allele frequency trajectories **AND** estimate the effective population size for (from?) Pool-seq time series data.
+
+[PoolSeq](https://github.com/ThomasTaus/poolSeq). Analyze and simulate time series Pool-seq data (E&R).  Allows estimation of N_e and quantification of **s**, as well as dominance.
+
+
 ## Some reasons to be optimistic (or not) about pooled sequencing.
 [Validation of SNP allele frequencies determined by pooled next-generation sequencing in natural populations of a non-model plant species](https://www.ncbi.nlm.nih.gov/pubmed/24244686)
 
