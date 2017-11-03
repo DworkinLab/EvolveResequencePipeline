@@ -1,8 +1,10 @@
 # Just some links to software, tools etc. to help analyse pooled sequence data.
 
 
-## Drosophila Genome Nexus
+## Drosophila Genome Nexus and PopFly.
 [Drosophila Genome Nexus](https://academic.oup.com/mbe/article/33/12/3308/2450097/A-Thousand-Fly-Genomes-An-Expanded-Drosophila). Links to over 1000 Drosophila melanogaster genomes, and importantly the variants detected among these! [here](http://www.johnpool.net/genomes.html) is the link to the file.
+
+[PopFly](http://popfly.uab.cat/). The awesome interactive browser for population genomics using the Drosophila Genome nexus (including subsets). 
 
 ## General tools useful for many large sequencing experiments (i.e. for dealing with .fastq, .SAM, .BAM or .vcf)
 [seqtk](https://github.com/lh3/seqtk). Sequence tool kit. converting file formats, extracting certain reads or parts etc..
