@@ -17,6 +17,7 @@
 
 [samstat](http://samstat.sourceforge.net/). Very simple, and sometimes only works on bam files. However, the reports are really quite helpful, in particular with examining what might be going on if you have low mapping quality (MAPQ).
 
+[qualimap](http://qualimap.bioinfo.cipf.es/). Qualimap examines sequencing alignment data in SAM/BAM files according to the features of the mapped reads and provides an overall view of the data that helps to the detect biases in the sequencing and/or mapping of the data and eases decision-making for further analysis. 
 
 [MultiQC](https://github.com/ewels/MultiQC). Seems like a way of integrating and generating summary reports across many samples from raw reads to sam/bam to vcf. A bit like FASTQCR perhaps (?). 
 
