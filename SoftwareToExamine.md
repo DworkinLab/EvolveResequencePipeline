@@ -79,8 +79,6 @@ Also see the markdown file on sequence QC.
 
 [Genotype-Frequency Estimation from High-Throughput Sequencing Data](http://www.genetics.org/content/201/2/473.short). Link to software is [here](https://github.com/Takahiro-Maruki/Package-GFE). 
 
-[estimating N_E from pooled sequencing data](https://github.com/ThomasTaus/Nest). Paper is [here](Estimating the Effective Population Size from Temporal Allele Frequency Changes in Experimental Evolution)
-
 [correcting biases in allele frequency estimation with some machine learning approaches](https://www.ncbi.nlm.nih.gov/pubmed/26156142)
 
 [LDx](http://petrov.stanford.edu/pdfs/86.pdf) Estimation of Linkage Disequilibrium from HighThroughput
@@ -88,7 +86,7 @@ Pooled Resequencing Data
 
 [Pool-hmm](http://onlinelibrary.wiley.com/doi/10.1111/1755-0998.12063/full). A Python program for estimating the allele frequency spectrum and detecting selective sweeps from next generation sequencing of pooled samples.
 
-[Nest](https://github.com/ThomasTaus/Nest). Simulate allele frequency trajectories **AND** estimate the effective population size for (from?) Pool-seq time series data.
+[Nest](https://github.com/ThomasTaus/Nest). Simulate allele frequency trajectories **AND** estimate N_e for (from?) Pool-seq time series data.
 
 [PoolSeq](https://github.com/ThomasTaus/poolSeq). Analyze and simulate time series Pool-seq data (E&R).  Allows estimation of N_e and quantification of **s**, as well as dominance.
 
