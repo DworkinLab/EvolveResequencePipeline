@@ -21,5 +21,7 @@
 
 [MultiQC](https://github.com/ewels/MultiQC). Seems like a way of integrating and generating summary reports across many samples from raw reads to sam/bam to vcf. A bit like FASTQCR perhaps (?). 
 
+[bedtools](https://github.com/arq5x/bedtools2). From description: bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. The most widely-used tools enable genome arithmetic: that is, set theory on the genome. For example, bedtools allows one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM, BED, GFF/GTF, VCF
+
 [see here](https://omictools.com/quality-control6-category) for a list of other QC tools for reads.
 
