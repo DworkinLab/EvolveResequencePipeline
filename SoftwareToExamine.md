@@ -4,7 +4,7 @@ While this page is a bit disorganized it contains links to papers and software o
 
 ## This is why we need to obsess about how we map reads, filter, indel re-align and call SNPs...
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Tajima&#39;s D in windows along a chromosome. Same population, same data, different SNP calling. <a href="https://twitter.com/hashtag/SundayWTF?src=hash&amp;ref_src=twsrc%5Etfw">#SundayWTF</a> <a href="https://t.co/oPcVDoac9X">pic.twitter.com/oPcVDoac9X</a></p>&mdash; Jeffrey Ross-Ibarra (@jrossibarra) <a href="https://twitter.com/jrossibarra/status/967886023337197568?ref_src=twsrc%5Etfw">February 25, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Tajima&#39;s D in windows along a chromosome. Same population, same data, different SNP calling. <a href="https://twitter.com/hashtag/SundayWTF?src=hash&amp;ref_src=twsrc%5Etfw">#SundayWTF</a> <a href="https://t.co/oPcVDoac9X">pic.twitter.com/oPcVDoac9X</a></p>&mdash; Jeffrey Ross-Ibarra (@jrossibarra) <a href="https://twitter.com/jrossibarra/status/967886023337197568?ref_src=twsrc%5Etfw">February 25, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
@@ -57,7 +57,6 @@ Also see the markdown file on sequence QC.
 
 ## Identifying polymorphisms (Software that can work well for pooled data).
 
-
 [Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/). A couple of important points from this paper. First GATK works well, but takes a long time even with small pools, and fails with large pools like we have used. While VarScan has low FP rates, its sensitivity and detecting true SNPs was VERY LOW. CRISP and LoFreq do pretty well, but CRISP seems to edge out LoFreq for pools with larger number of samples. Everything is based on default parameters though, so be aware.
 
 [Best Practices for data preparation for calling SNPs](https://software.broadinstitute.org/gatk/best-practices/). Some parts are relevant (i.e. map to reference, mark duplicates, realign around small indels etc.). See [this](https://software.broadinstitute.org/gatk/img/BP_workflow_3.6.png)
@@ -76,14 +75,16 @@ Also see the markdown file on sequence QC.
 
 [SNPeff](http://snpeff.sourceforge.net/). Genetic variant annotation and effect prediction toolbox. Not for identifying SNPs, but for annotating them.
 
+I have not included [ANGSD](http://www.popgen.dk/angsd/index.php/ANGSD#Overview) as I do not think it works on pooled data. However it looks like it may be a useful pipeline for variant calling and simple population genomic analysis.  
+
+Similarly, while GATK is (?) one of the "industry standards" for variant calling, in our hands we continue to have major issues with variant calling on large pools. However papers from Molly Burke, Tony Long, etc.. all seem to have used it successfully with pooled data, so we need to get in contact with them to see if it is just an issue of some parameter differences.
+
 ## Using two different mapping tools and comparing VCFs 
 [Suitability of Different Mapping Algorithms for Genome-wide Polymorphism Scans with Pool-Seq Data](https://www.ncbi.nlm.nih.gov/pubmed/27613752)
 
 ## allele frequencies and basic evolutionary parameters.
 
-[PoPoolation](https://sourceforge.net/p/popoolation/wiki/Main/). Estimating basic evolutionary parameters from pooled data.
-
-[PoPoolation2](https://sourceforge.net/p/popoolation2/wiki/Main/). Comparison of allele frequencies among populations or treatments (BSA) from pooled sequence data. 
+[PoPoolation](https://sourceforge.net/p/popoolation/wiki/Main/). Estimating basic evolutionary parameters from pooled data. Lots of options for doing this in some of the tools above, or in R as well.
 
 [CLEAR](https://github.com/bafnalab/clear). This a new method (and associated software) for longitudinal sequence data from E&R type experiments, that is designed for the kinds of experiments we employ. The paper is on birxiv [here](https://github.com/bafnalab/clear).
 
@@ -101,6 +102,8 @@ Pooled Resequencing Data
 [Nest](https://github.com/ThomasTaus/Nest). Simulate allele frequency trajectories **AND** estimate N_e for (from?) Pool-seq time series data.
 
 [PoolSeq](https://github.com/ThomasTaus/poolSeq). Analyze and simulate time series Pool-seq data (E&R).  Allows estimation of N_e and quantification of **s**, as well as dominance.
+
+[PoPoolation2](https://sourceforge.net/p/popoolation2/wiki/Main/). Comparison of allele frequencies among populations or treatments (BSA) from pooled sequence data.  This has fairly limited applications as it really just uses a CMH test for multidimensional contigency tables. CLEAR and pool-seq are better options now I think.
 
 
 ## Some reasons to be optimistic (or not) about pooled sequencing.
