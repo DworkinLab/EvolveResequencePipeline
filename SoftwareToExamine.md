@@ -60,6 +60,8 @@ Also see the markdown file on sequence QC.
 
 [LoFreq](http://csb5.github.io/lofreq/citation/)
 
+[SHORE](http://shore.sourceforge.net/wiki/index.php/SHORE_Documentation). Which is apparently a useful pipeline for pooled data as well.
+
 [snape](https://www.ncbi.nlm.nih.gov/pubmed/22992255). Not such an active community?
 
 [SNPeff](http://snpeff.sourceforge.net/). Genetic variant annotation and effect prediction toolbox. Not for identifying SNPs, but for annotating them.
