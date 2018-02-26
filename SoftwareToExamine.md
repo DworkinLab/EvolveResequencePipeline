@@ -1,7 +1,15 @@
 # Just some links to software, tools etc. to help analyse pooled sequence data.
 
+While this page is a bit disorganized it contains links to papers and software of relevance to how we go about calling SNPs for population genomic analysis in particular for pooled data. 
 
-## Drosophila Genome Nexus and PopFly.
+## This is why we need to obsess about how we map reads, filter, indel re-align and call SNPs...
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Tajima&#39;s D in windows along a chromosome. Same population, same data, different SNP calling. <a href="https://twitter.com/hashtag/SundayWTF?src=hash&amp;ref_src=twsrc%5Etfw">#SundayWTF</a> <a href="https://t.co/oPcVDoac9X">pic.twitter.com/oPcVDoac9X</a></p>&mdash; Jeffrey Ross-Ibarra (@jrossibarra) <a href="https://twitter.com/jrossibarra/status/967886023337197568?ref_src=twsrc%5Etfw">February 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+## Drosophila Genome Nexus and PopFly. i.e. Drosophila genomic data to play with or use for comparison.
+
 [Drosophila Genome Nexus](https://academic.oup.com/mbe/article/33/12/3308/2450097/A-Thousand-Fly-Genomes-An-Expanded-Drosophila). Links to over 1000 Drosophila melanogaster genomes, and importantly the variants detected among these! [here](http://www.johnpool.net/genomes.html) is the link to the file.
 
 [PopFly](http://popfly.uab.cat/). The awesome interactive browser for population genomics using the Drosophila Genome nexus (including subsets). 
@@ -47,8 +55,10 @@ Also see the markdown file on sequence QC.
 [seqmonk](http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/)
 
 
-## Identifying polymorphisms (tSoftware work well for pooled data).
-[Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/). A couple of important points from this paper. First GATK works well, but takes a long time even with small pools, and fails with large pools like we have used. While VarScan has low FP rates, its sensitivity and detecting true SNPs was VERY LOW. CRISP and LoFreq do pretty well, but CRISP seems to edge out LoFreq for pools with larger number of samples. Everything is based on default parameters though.
+## Identifying polymorphisms (Software that can work well for pooled data).
+
+
+[Evaluation of variant detection software for pooled next-generation sequence data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4518579/). A couple of important points from this paper. First GATK works well, but takes a long time even with small pools, and fails with large pools like we have used. While VarScan has low FP rates, its sensitivity and detecting true SNPs was VERY LOW. CRISP and LoFreq do pretty well, but CRISP seems to edge out LoFreq for pools with larger number of samples. Everything is based on default parameters though, so be aware.
 
 [Best Practices for data preparation for calling SNPs](https://software.broadinstitute.org/gatk/best-practices/). Some parts are relevant (i.e. map to reference, mark duplicates, realign around small indels etc.). See [this](https://software.broadinstitute.org/gatk/img/BP_workflow_3.6.png)
 
