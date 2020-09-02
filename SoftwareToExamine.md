@@ -131,3 +131,5 @@ A new (2017) paper showing how number of individuals and among individual contri
 ## Assorted other things
 
 [The Marth Lab](http://marthlab.org/software.html) seems to have lots of new tools in development for variant detection etc..
+
+[A list of file formats that we care about](https://genome.ucsc.edu/FAQ/FAQformat.html)
